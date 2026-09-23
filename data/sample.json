@@ -1,0 +1,273 @@
+[
+    {
+      "conversation_id": "c01",
+      "turns": [
+        {
+          "utterance": "I lost my card",
+          "intent": "card_block",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": false
+        },
+        {
+           "utterance": "Misplaced my card",
+          "intent": "card_block",
+          "confidence": 0.91,
+          "fallback": true,
+          "handoff": false 
+        },
+        {
+          "utterance": "somebody took my card",
+          "intent": "card_block",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": true
+        }
+      ]
+    },
+    {
+        "conversation_id": "c02",
+      "turns": [
+        {
+          "utterance": "I lost my card",
+          "intent": "charge_dispute",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": false
+        },
+        {
+           "utterance": "Misplaced my card",
+          "intent": "charge_dispute",
+          "confidence": 0.91,
+          "fallback": true,
+          "handoff": false 
+        }
+    ]
+    },
+    {
+      "conversation_id": "c03",
+      "turns": [
+        {
+          "utterance": "what is late fee",
+          "intent": "faq_charges",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": false
+        },
+        {
+           "utterance": "how to waive annual fee",
+          "intent": "faq_charges",
+          "confidence": 0.91,
+          "fallback": true,
+          "handoff": false 
+        }
+    ]
+    },
+    {
+      "conversation_id": "c04",
+      "turns": [
+        {
+          "utterance": "i want to raise a dispute",
+          "intent": "charge_dispute",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": false
+        },
+        {
+           "utterance": "i want to issue a chargeback",
+          "intent": "charge_dispute",
+          "confidence": 0.91,
+          "fallback": true,
+          "handoff": false 
+        },
+        {
+          "utterance": "i want to raise a dispute",
+          "intent": "charge_dispute",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": true
+        }
+      ]
+    },
+    {
+      "conversation_id": "c05",
+      "turns": [
+        {
+          "utterance": "what is latefee ",
+          "intent": "faq_charges",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": false
+        },
+        {
+           "utterance": "how to waive annual fee",
+          "intent": "faq_charges",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": false 
+        }
+    ]
+    },
+    {
+      "conversation_id": "c06",
+      "turns": [
+        {
+          "utterance": "my wallet is stolen block my card",
+          "intent": "card_block",
+          "confidence": 0.91,
+          "fallback": true,
+          "handoff": true
+        }
+    ]
+    },
+    {
+      "conversation_id": "c07",
+    "turns": [
+      {
+        "utterance": "i lost my card",
+        "intent": "card_block",
+        "confidence": 0.91,
+        "fallback": false,
+        "handoff": false
+      },
+      {
+         "utterance": "my card is stuck in an ATM block it",
+        "intent": "card_block",
+        "confidence": 0.91,
+        "fallback": false,
+        "handoff": false 
+      }
+  ]
+  },
+  {
+        "conversation_id": "c08",
+      "turns": [
+        {
+          "utterance": "what happened to my dispute",
+          "intent": "charge_dispute",
+          "confidence": 0.91,
+          "fallback": false,
+          "handoff": false
+        },
+        {
+           "utterance": "i want to dispute a transaction on my credit card",
+          "intent": "charge_dispute",
+          "confidence": 0.91,
+          "fallback": true,
+          "handoff": false 
+        }
+    ]
+    },
+    {
+      "conversation_id": "c09",
+    "turns": [
+      {
+        "utterance": "what is the 200 rupee charge on my card",
+        "intent": "faq_charges",
+        "confidence": 0.91,
+        "fallback": false,
+        "handoff": true
+      }
+  ]
+  },
+  {
+    "conversation_id": "c10",
+  "turns": [
+    {
+      "utterance": "block my card please",
+      "intent": "card_block",
+      "confidence": 0.91,
+      "fallback": false,
+      "handoff": false
+    },
+    {
+       "utterance": "i left my card in the bus please block it",
+      "intent": "card_block",
+      "confidence": 0.91,
+      "fallback": false,
+      "handoff": false 
+    }
+]
+},
+{
+  "conversation_id": "c11",
+"turns": [
+  {
+    "utterance": "what is the charge of 100 on my debit account",
+    "intent": "faq_charges",
+    "confidence": 0.91,
+    "fallback": true,
+    "handoff": false
+  },
+  {
+    "utterance": "i want to understand the cheque bounce charges",
+    "intent": "faq_charges",
+    "confidence": 0.91,
+    "fallback": false,
+    "handoff": false 
+  }
+]
+},
+{
+  "conversation_id": "c12",
+"turns": [
+  {
+    "utterance": "i need an update on my dispute",
+    "intent": "charge_dispute",
+    "confidence": 0.91,
+    "fallback": false,
+    "handoff": true
+  }
+]
+},
+{
+  "conversation_id": "c13",
+"turns": [
+  {
+    "utterance": "i want to dispute",
+    "intent": "charge_dispute",
+    "confidence": 0.91,
+    "fallback": false,
+    "handoff": false
+  },
+  {
+     "utterance": "how to raise a dispute",
+    "intent": "charge_dispute",
+    "confidence": 0.91,
+    "fallback": false,
+    "handoff": false 
+  }
+]
+},
+{
+"conversation_id": "c14",
+"turns": [
+{
+  "utterance": "how to block my card",
+  "intent": "card_block",
+  "confidence": 0.91,
+  "fallback": true,
+  "handoff": false
+},
+{
+  "utterance": "how to block my credit card",
+  "intent": "card_block",
+  "confidence": 0.91,
+  "fallback": false,
+  "handoff": false 
+}
+]
+},
+{
+"conversation_id": "c15",
+"turns": [
+{
+  "utterance": "what is the charge on my card",
+  "intent": "faq_charges",
+  "confidence": 0.91,
+  "fallback": false,
+  "handoff": true
+}
+]
+}
+]
