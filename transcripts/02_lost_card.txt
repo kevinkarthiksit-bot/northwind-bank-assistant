@@ -1,0 +1,3 @@
+User: I lost my card. Can you help me block it?
+
+Assistant: I can help with Northwind debit-card block topics once we have the published policy steps. If you want to speak to a person right away, I can offer a handoff to a human agent.
