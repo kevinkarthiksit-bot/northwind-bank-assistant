@@ -6,5 +6,4 @@ the first four results are
 conversation count, fallback count, handoff count, and the intent dict.
 
 
-
-progress to learn slow and steady
+progress to learn slow and steady to get a job 
