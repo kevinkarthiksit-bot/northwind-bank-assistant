@@ -1,4 +1,6 @@
 from pathlib import Path
+import numpy as np
+
 
 
 POLICIES_DIR = Path(__file__).resolve().parent.parent /"policies"
@@ -24,11 +26,37 @@ def split_on_headings(text:str,source:str) -> list[dict]:
         )
     return chunks
 
+def add_overlap(chunks: list[dict], overlap_words:int =40)-> list[dict]:
+    if not chunks:
+        return chunks
+    out = [chunks[0]]
+    
+    for i in range(1,len(chunks)):
+        prev = chunks[i-1]
+        cur = chunks[i]
+        #only overlap within the same policy file 
+        if prev["source"] == cur["source"]:
+            tail=" ".join(prev["text"].split()[-overlap_words:])
+            new_text = tail+"\n"+cur["text"]
+        else:
+            new_text = cur["text"]
+        out.append(
+            {
+                "source":cur["source"],
+                "heading":cur["heading"],
+                "text":new_text,
+            }
+        )
+    return out
+
 def load_chunks()->list[dict]:
     all_chunks = []
     for path in sorted(POLICIES_DIR.glob("*.md")):
-        all_chunks.extend(split_on_headings(path.read_text(encoding="utf-8"),path.name))
-    return all_chunks
+        all_chunks.extend(
+            split_on_headings(path.read_text(encoding="utf-8"),path.name)
+        )
+    return add_overlap(all_chunks)
+    
 
 
 def tokenize(text:str)-> set[str]:
@@ -43,6 +71,11 @@ def score_chunk(question:str, chunk:dict)-> int:
     q=tokenize(question)
     c=tokenize(chunk["text"])
     return len(q&c)
+
+def cosine(a,b)->float:
+    a= np.asarray(a,dtype=float)
+    b= np.asarray(b,dtype=float)
+    return float(np.dot(a,b)/(np.linalg.norm(a) * np.linalg.norm(b)))
 
 if __name__ == "__main__":
    if __name__ == "__main__":
